@@ -22,6 +22,8 @@ const db = admin.initializeApp().firestore();
 // to any items in a cart.
 // Recalculates the total cost of a cart; triggered when there's a change
 // to any items in a cart.
+// Recalculates the total cost of a cart; triggered when there's a change
+// to any items in a cart.
 exports.calculateCart = functions
     .firestore.document("carts/{cartId}/items/{itemId}")
     .onWrite(async(change, context) => {
